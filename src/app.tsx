@@ -27,7 +27,18 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+    ],
+		subPackages: [
+			{
+				// 微商城
+				root: "sub-packages/retailers",
+				pages: [
+					// 首页
+					"index/index",
+					// 搜索
+				]
+      }
     ],
     window: {
       backgroundTextStyle: 'light',

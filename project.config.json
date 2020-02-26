@@ -12,5 +12,18 @@
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-	"condition": {}
+	"condition": {
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "微商城",
+					"pathName": "sub-packages/retailers/index/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
 }

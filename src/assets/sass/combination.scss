@@ -1,0 +1,84 @@
+@import './base.scss';
+
+/**
+ * 组合样式
+ */
+
+/** 线条 */
+.b_line_h {
+	width: 3px;
+	background: #F2F0F4;
+}
+.b_line_w {
+	height: 3px;
+	background: #F2F0F4;
+}
+/** 省略号 */
+.ellipsis {
+	@extend .t_of_e;
+	@extend .w_s_n;
+	@extend .of_h;
+}
+/** 按钮 */
+
+button::after {
+	border: none;
+}
+.btn {
+
+}
+.btn-select {
+	@extend .flex;
+	@extend .flex_ai_c;
+	@extend .flex_jc_c;
+	@extend .f_s_32;
+	@extend .c_999;
+	@extend .b_solid_CA;
+	@extend .b_radius_8;
+	@extend .h_64;
+	@extend .t_a_c;
+}
+.btn-select-small {
+	@extend .flex;
+	@extend .flex_ai_c;
+	@extend .flex_jc_c;
+	@extend .f_s_24;
+	@extend .c_666;
+	@extend .b_solid_CA;
+	@extend .b_radius_8;
+	@extend .h_50;
+	@extend .t_a_c;
+	@extend .p_lr_20;
+}
+.btn-select-mid {
+	@extend .flex;
+	@extend .flex_ai_c;
+	@extend .flex_jc_c;
+	@extend .f_s_28;
+	@extend .c_666;
+	@extend .b_solid_CA;
+	@extend .b_radius_8;
+	@extend .h_50;
+	@extend .t_a_c;
+	@extend .p_lr_24;
+}
+// 多选按钮选中状态
+.btn-select-true {
+	@extend .b_solid_BE93FF;
+	@extend .bg_violet_F8F5FF;
+	@extend .c_violet_1;
+}
+/** 输入框 */
+.c_input {
+	@extend .f_s_32;
+	@extend .c_333;
+}
+.c_b_b_input {
+	@extend .c_input;
+	@extend .b_b_solid_CA;
+}
+.c_b_input {
+	@extend .c_input;
+	@extend .b_radius_8;
+	@extend .b_solid_CA;
+}
