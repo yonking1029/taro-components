@@ -1,44 +1,44 @@
-import { ComponentClass } from "react";
-import Taro, { Component, Config } from "@tarojs/taro";
-import { View } from "@tarojs/components";
+import Taro, { Component, Config } from "@tarojs/taro"
+import { View, Swiper, SwiperItem, Image } from "@tarojs/components"
+import PropTypes from 'prop-types'
 
-type PageStateProps = {
-  counter: {
-    num: number;
-  };
-};
-
-type PageDispatchProps = {
-};
-
-type PageOwnProps = {};
-
-type PageState = {};
-
-type IProps = PageStateProps & PageDispatchProps & PageOwnProps;
-
-interface Index {
-  props: IProps;
-}
 /**
- * 轮播广告（6个图片轮播）
+ * 轮播广告（图片轮播）
  */
-class Index extends Component {
+export default class Index extends Component {
   config: Config = {
     navigationBarTitleText: ""
-  };
+  }
+	static options = {
+		addGlobalClass: true
+	}
+
+	static propTypes = {
+    list: PropTypes.array,
+	}
+  static defaultProps = {
+    list: [],
+  }
 
   componentWillReceiveProps(nextProps) {
     console.log(this.props, nextProps);
   }
 
   render() {
+    let { list } = this.props
     return (
-      <View>
-      轮播广告（6个图片轮播）
+      <View className=''>
+        <Swiper>
+          {
+            list.map(item => {
+              return <SwiperItem>
+              <Image className='b_radius_8 w_670 h_300' src={item.url}></Image>
+            </SwiperItem>
+            })
+          }
+      </Swiper>
       </View>
     );
   }
 }
 
-export default Index as ComponentClass<PageOwnProps, PageState>;

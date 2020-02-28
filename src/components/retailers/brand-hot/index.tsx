@@ -1,44 +1,36 @@
-import { ComponentClass } from "react";
 import Taro, { Component, Config } from "@tarojs/taro";
-import { View } from "@tarojs/components";
+import { View, Image } from "@tarojs/components";
+import PropTypes from 'prop-types'
 
-type PageStateProps = {
-  counter: {
-    num: number;
-  };
-};
-
-type PageDispatchProps = {
-};
-
-type PageOwnProps = {};
-
-type PageState = {};
-
-type IProps = PageStateProps & PageDispatchProps & PageOwnProps;
-
-interface Index {
-  props: IProps;
-}
 /**
  * 热门品牌（热门品牌4个，4行，图片）
  */
-class Index extends Component {
+export default class Index extends Component {
   config: Config = {
     navigationBarTitleText: ""
   };
 
-  componentWillReceiveProps(nextProps) {
-    console.log(this.props, nextProps);
+	static options = {
+		addGlobalClass: true
+	}
+
+	static propTypes = {
+    list: PropTypes.array,
+	}
+  static defaultProps = {
+    list: [],
   }
 
   render() {
+    let { list } = this.props
     return (
-      <View>
-      热门品牌（热门品牌4个，4行，图片）
+      <View className='m_tb_20'>
+        {
+          list.map(item => {
+            return <Image className='h_180 w_670 m_b_40' src={item.url}></Image> 
+          })
+        }
       </View>
     );
   }
 }
-
-export default Index as ComponentClass<PageOwnProps, PageState>;

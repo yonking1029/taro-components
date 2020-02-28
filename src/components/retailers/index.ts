@@ -1,3 +1,4 @@
+// 微商城
 export { default as Advertisement } from './advertisement/index'
 export { default as ClassificationHot } from './classification-hot/index'
 export { default as BrandHot } from './brand-hot/index'

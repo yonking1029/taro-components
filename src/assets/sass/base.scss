@@ -91,7 +91,7 @@
 .c_FDA100 {
 	color: #FDA100;
 }
-// 紫色（跨越紫色）
+// 紫色
 .c_violet_1 {
 	color: #A37EFE;
 }
@@ -148,39 +148,45 @@
 .bg_fff {
 	background-color: #ffffff;
 }
-.bg_f2 {
-	background-color: #F2F2F2;
+.bg_f2f2f2 {
+	background-color: #f2f2f2;
 }
-.bg_f4 {
-	background-color: #F4F4F4;
+.bg_f4f4f4 {
+	background-color: #f4f4f4;
 }
-.bg_f8 {
-	background-color: #F8F8F8;
+.bg_f8f8f8 {
+	background-color: #f8f8f8;
 }
-.bg_khaki {
+.bg_F99257 {
 	background-color: #F99257;
 }
-// 紫色（跨越紫色）
-.bg_violet {
+// 紫色
+.bg_A37EFE {
 	background-color: #A37EFE;
 }
-.bg_violet_F8F5FF {
-	background-color: #F8F5FF;
+.bg_ffeaea {
+	background-color: #ffeaea;
 }
-.bg_black {
+.bg_f8f5ff {
+	background-color: #f8f5ff;
+}
+.bg_000 {
 	background-color: #000000;
 }
-.bg_black_8 {
+.bg_00000080 {
 	background-color: #00000080;
 }
-.bg_black_ab {
+.bg_000000ab {
 	background-color: #000000ab;
 }
-.bg_yellow_D2 {
-	background-color: #FFFAD2;
+.bg_fffad2 {
+	background-color: #fffad2;
 }
-.bg_A57FFD_8D6CFF{
-	background-image: linear-gradient(134deg, #A57FFD 0%, #8D6CFF 100%);
+.bg_c70c2b {
+	background-color: #c70c2b;
+}
+.bg_a57ffd_8d6cff{
+	background-image: linear-gradient(134deg, #a57ffd 0%, #8d6cff 100%);
 }
 // 自动换行
 .w_w_b_w {
@@ -191,6 +197,9 @@
 }
 .text_d_u{
 	text-decoration:underline;
+}
+.text_d_lt{
+	text-decoration: line-through;
 }
 
 .opacity_0 {
@@ -405,8 +414,8 @@
 .b_solid_CA {
 	border: 1px solid #CACACA;
 }
-.b_solid_BE93FF {
-	border: 1px solid #BE93FF;
+.b_solid_be93ff {
+	border: 1px solid #be93ff;
 }
 .b_solid_F2 {
 	border: 1px solid #F2F2F2;
@@ -754,6 +763,9 @@
 .m_1 {
 	margin: 1px;
 }
+.m_10 {
+	margin: 10px;
+}
 .m_20 {
 	margin: 20px;
 }
@@ -803,6 +815,9 @@
 }
 .w_120 {
 	width: 120px;
+}
+.w_134 {
+	width: 134px;
 }
 .w_144 {
 	width: 144px;
@@ -978,6 +993,9 @@
 }
 .h_290 {
 	height: 290px;
+}
+.h_300 {
+	height: 300px;
 }
 .h_340 {
 	height: 340px;

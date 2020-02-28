@@ -1,29 +1,11 @@
-import { ComponentClass } from "react";
-import Taro, { Component, Config } from "@tarojs/taro";
-import { View } from "@tarojs/components";
+import Taro, { Component, Config } from "@tarojs/taro"
+import { View, Image } from "@tarojs/components"
+import PropTypes from 'prop-types'
 
-type PageStateProps = {
-  counter: {
-    num: number;
-  };
-};
-
-type PageDispatchProps = {
-};
-
-type PageOwnProps = {};
-
-type PageState = {};
-
-type IProps = PageStateProps & PageDispatchProps & PageOwnProps;
-
-interface Index {
-  props: IProps;
-}
 /**
  * 秒杀（3个）
  */
-class Index extends Component {
+export default class Index extends Component {
   config: Config = {
     navigationBarTitleText: ""
   };
@@ -31,14 +13,43 @@ class Index extends Component {
   componentWillReceiveProps(nextProps) {
     console.log(this.props, nextProps);
   }
+	static options = {
+		addGlobalClass: true
+	}
+
+	static propTypes = {
+    list: PropTypes.array,
+	}
+  static defaultProps = {
+    list: [],
+  }
 
   render() {
+    let { list } = this.props
     return (
       <View>
-      秒杀（3个）
+        <View className='f_s_26 c_FDA100 t_a_c'>爆款秒杀</View>
+        <View className='flex'>
+          {
+            list.map(item => {
+              return (<View className='flex_1 t_a_c bg_ffeaea m_10 p_tb_10'>
+                <View className=''>
+                  <View className=''>
+                    <Image className='w_180 h_150' src={item.url}></Image>
+                  </View>
+                  <View className='flex flex_jc_c flex_ai_e'>
+                    <View className='f_s_22 c_red m_r_20'>{item.price}</View>
+                    <View className='f_s_20 c_999 text_d_lt'>¥{item.originalPrice}</View>
+                  </View>
+                  <View className='t_a_c'>
+                    <View className='b_radius_50 block f_s_20 c_fff bg_c70c2b p_lr_15'>立即购买</View>
+                  </View>
+                </View>
+              </View>)
+            })
+          }
+        </View>
       </View>
     );
   }
 }
-
-export default Index as ComponentClass<PageOwnProps, PageState>;
