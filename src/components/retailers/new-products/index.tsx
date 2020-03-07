@@ -6,15 +6,13 @@ import PropTypes from 'prop-types'
  * 新品（上面一个图片表示类目，下面8个商品滚动+查看更多）（食品，居家用品，百货，母婴）
  */
 export default class Index extends Component {
-  config: Config = {
-    navigationBarTitleText: ""
-  };
 
 	static options = {
 		addGlobalClass: true
 	}
 
 	static propTypes = {
+    titleUrl: PropTypes.string,
     list: PropTypes.array,
 	}
   static defaultProps = {
@@ -22,10 +20,10 @@ export default class Index extends Component {
   }
 
   render() {
-    let { list } = this.props
+    let { titleUrl, list } = this.props
     return (
-      <View>
-        <View>上面一个图片表示类目</View>
+      <View className='m_t_30'>
+        <View><Image className='w_670 h_180' src={titleUrl}></Image></View>
         <ScrollView scrollX className='w_670 of_h'>
           <View className='flex'>
             {

@@ -82,3 +82,13 @@ button::after {
 	@extend .b_radius_8;
 	@extend .b_solid_CA;
 }
+.flex_center {
+	@extend .flex;
+	@extend .flex_jc_c;
+	@extend .flex_ai_c;
+}
+.flex_between {
+	@extend .flex;
+	@extend .flex_jc_b;
+	@extend .flex_ai_c;
+}
