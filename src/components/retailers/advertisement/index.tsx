@@ -1,14 +1,11 @@
-import Taro, { Component, Config } from "@tarojs/taro"
+import Taro, { Component } from "@tarojs/taro"
 import { View, Swiper, SwiperItem, Image } from "@tarojs/components"
 import PropTypes from 'prop-types'
 
 /**
  * 轮播广告（图片轮播）
  */
-export default class Index extends Component {
-  config: Config = {
-    navigationBarTitleText: ""
-  }
+export default class Index extends Component<any> {
 	static options = {
 		addGlobalClass: true
 	}
@@ -38,7 +35,7 @@ export default class Index extends Component {
           }
       </Swiper>
       </View>
-    );
+    )
   }
 }
 

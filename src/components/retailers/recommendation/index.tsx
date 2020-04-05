@@ -1,4 +1,4 @@
-import Taro, { Component, Config } from "@tarojs/taro"
+import Taro, { Component } from "@tarojs/taro"
 import { View, Image, ScrollView } from "@tarojs/components"
 import PropTypes from 'prop-types'
 
@@ -6,7 +6,7 @@ import ICON from './icon.png'
 /**
  * 特色推荐（上面一个品牌，下面三个商品）（推荐旗舰店）
  */
-export class Index extends Component {
+export class Index extends Component<any> {
 	static options = {
 		addGlobalClass: true
 	}

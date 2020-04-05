@@ -62,6 +62,7 @@ export default class Index extends Component {
       { label: '男士牛皮扣腰带', price: '43', originalPrice: '600', url: require('@/assets/imgs/recommendation-2.jpg') },
       { label: '欧美经典贝壳包', price: '234', originalPrice: '645', url: require('@/assets/imgs/recommendation-3.jpeg') },
     ],
+    // 人气精品
     populars: [
       { label: 'Adidas运动宽松休闲长裤', price: '188', originalPrice: '645', url: require('@/assets/imgs/new-products-1.jpg') },
       { label: 'GU极优男装宽松长袖', price: '128', originalPrice: '645', url: require('@/assets/imgs/new-products-2.jpg') },
@@ -83,10 +84,10 @@ export default class Index extends Component {
       { label: '千鸟格羽绒服滑雪外套', price: '223', originalPrice: '645', url: require('@/assets/imgs/new-products-9.jpg') },
     ],
   }
-  componentWillReceiveProps(nextProps) {
-    console.log(this.props, nextProps);
+  /** 打卡购物车弹框 */
+  onShoppingCart(item) {
+    
   }
-
   render() {
     let { 
       ads, 
@@ -112,7 +113,12 @@ export default class Index extends Component {
         {/* recommendation 特色推荐（上面一个品牌，下面三个商品）（推荐旗舰店） */}
         <Recommendation titleUrl={recommendationTitleUrl} list={recommendations}></Recommendation>
         {/* popular-products 人气精品（一排两个推荐商品） */}
-        <PopularProducts list={populars}></PopularProducts>
+        <PopularProducts list={populars} onShoppingCart={this.onShoppingCart}></PopularProducts>
+
+        <View>
+          {/* 购物车组件 */}
+
+        </View>
       </View>
     );
   }

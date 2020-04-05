@@ -1,4 +1,4 @@
-import Taro, { Component, Config } from "@tarojs/taro"
+import Taro, { Component } from "@tarojs/taro"
 import { View, Image, ScrollView } from "@tarojs/components"
 import PropTypes from 'prop-types'
 
@@ -8,18 +8,22 @@ import ICON_CARD from './icon-card.png'
 /**
  * 人气精品（一排两个推荐商品）
  */
-export class Index extends Component {
+export default class Index extends Component<any> {
   static options = {
 		addGlobalClass: true
 	}
 	static propTypes = {
     list: PropTypes.array,
+    onShoppingCart: PropTypes.func,
   }
-  
   static defaultProps = {
     list: [],
   }
-
+  /** 点击购物车 */
+  onShoppingCart(item) {
+    let { onShoppingCart } = this.props
+    onShoppingCart && onShoppingCart(item)
+  }
   render() {
     let { list } = this.props
     return (
@@ -42,7 +46,9 @@ export class Index extends Component {
                       <View className='c_red f_s_30'>¥{item.price}</View>
                       <View className='c_999 f_s_26 text_d_lt m_l_20'>¥{item.originalPrice}</View>
                     </View>
-                    <Image className='w_50 h_50' src={ICON_CARD}></Image>
+                    <Image onClick={() => {
+                      this.onShoppingCart(item)
+                    }} className='w_50 h_50' src={ICON_CARD}></Image>
                   </View>
                 </View>)
               })
@@ -50,6 +56,6 @@ export class Index extends Component {
           </View>
         </ScrollView>
       </View>
-    );
+    )
   }
 }

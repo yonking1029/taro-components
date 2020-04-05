@@ -1,11 +1,11 @@
-import Taro, { Component, Config } from "@tarojs/taro"
+import Taro, { Component } from "@tarojs/taro"
 import { View, Image, ScrollView } from "@tarojs/components"
 import PropTypes from 'prop-types'
 
 /**
  * 新品（上面一个图片表示类目，下面8个商品滚动+查看更多）（食品，居家用品，百货，母婴）
  */
-export default class Index extends Component {
+export default class Index extends Component<any> {
 
 	static options = {
 		addGlobalClass: true
@@ -45,6 +45,6 @@ export default class Index extends Component {
           </View>
         </ScrollView>
       </View>
-    );
+    )
   }
 }

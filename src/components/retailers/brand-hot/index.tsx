@@ -1,14 +1,11 @@
-import Taro, { Component, Config } from "@tarojs/taro";
+import Taro, { Component } from "@tarojs/taro";
 import { View, Image } from "@tarojs/components";
 import PropTypes from 'prop-types'
 
 /**
  * 热门品牌（热门品牌4个，4行，图片）
  */
-export default class Index extends Component {
-  config: Config = {
-    navigationBarTitleText: ""
-  };
+export default class Index extends Component<any> {
 
 	static options = {
 		addGlobalClass: true
@@ -31,6 +28,6 @@ export default class Index extends Component {
           })
         }
       </View>
-    );
+    )
   }
 }
