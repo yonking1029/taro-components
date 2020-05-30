@@ -1,0 +1,16 @@
+{
+  "name": "oldsport-style",
+  "version": "1.0.0",
+  "description": "public scss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "style",
+    "css",
+    "scss"
+  ],
+  "author": "yonking",
+  "license": "ISC"
+}
